@@ -7,9 +7,8 @@ import {useAlert} from "react-alert";
 import LotteryData from "./LotteryData";
 import JoinLottery from "./JoinLottery";
 
+// Probably should be fetched from some kind of backend.
 const contractAddress = "0x8d4b40C9e7ef8fafA0E4E857Ea53aF32CbfE52Fc";
-//todo should be fetched as rest not hardcoded
-const ticketCost = 1e7;
 
 const App: FC = (): JSX.Element => {
     const alert = useAlert()
@@ -19,6 +18,7 @@ const App: FC = (): JSX.Element => {
     const [isChainRopsten, setIsChainRopsten] = useState(false)
     const [accountAddress, setAccountAddress] = useState<string | null>(null)
     const [shouldRefetch, setShouldRefetch] = useState(false)
+    const [ticketCost, setTicketCost] = useState(1e7)
     const [error, setError] = useState<any>()
 
     useEffect(() => {
@@ -101,22 +101,22 @@ const App: FC = (): JSX.Element => {
 
     if (!isMetaMaskDetected) {
         return (<>
-            MetaMask not detected - no provider
+            MetaMask not detected. Please install MetaMask and refresh this site!
         </>)
     }
 
     if (!isChainRopsten){
         return (<>
-            Please switch your metamask to Ropsten chain.
+            Lottery is set up on the Ropsten test chain. <br/>
+            Please switch your MetaMask to Ropsten chain!
         </>)
     }
 
     if (!isMetaMaskConnected) {
         return (<>
-                {/*{window.ethereum.chain}*/}
                 <Button onClick={tryToConnectToMetaMask}>Connect MetaMask</Button> <br/>
                 <LotteryData web3={web3} contractAddress={contractAddress} shouldRefetch={shouldRefetch}
-                             setShouldRefetch={setShouldRefetch}/>
+                             setShouldRefetch={setShouldRefetch} ticketCost={ticketCost} setTicketCost={setTicketCost}/>
             </>
         );
     } else {
@@ -125,7 +125,7 @@ const App: FC = (): JSX.Element => {
                                                           userAddress={accountAddress} shouldRefetch={shouldRefetch}
                                                           setShouldRefetch={setShouldRefetch} ticketCost={ticketCost}/> <br/>
                 <LotteryData web3={web3} contractAddress={contractAddress} shouldRefetch={shouldRefetch}
-                             setShouldRefetch={setShouldRefetch}/>
+                             setShouldRefetch={setShouldRefetch} ticketCost={ticketCost} setTicketCost={setTicketCost}/>
             </>
         );
     }

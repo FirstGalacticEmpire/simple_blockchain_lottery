@@ -1,5 +1,6 @@
 // @ts-ignore
 import Web3 from 'web3/dist/web3.min.js'
+// Probably should be fetched from some kind of backend.
 const contract = require("./LotteryContract.json")
 
 class ContractApi {
@@ -28,6 +29,14 @@ class ContractApi {
 
     async getCurrentPool(): Promise<number>{
         return await this.web3.eth.getBalance(this.contractAddress)
+    }
+
+    // async getProbabilityOfWinning(): Promise<number>{
+    //     return await this.web3.eth.getWinningProbability().call()
+    // }
+
+    async getTicketCost(): Promise<number>{
+        return await this.LotteryContract.methods.ticketCost().call()
     }
 
     async enterLottery(params: any): Promise<any>{

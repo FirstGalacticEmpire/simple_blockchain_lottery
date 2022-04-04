@@ -44,9 +44,9 @@ const JoinLottery: FC<Props> = ({web3, contractAddress, userAddress,
 
     useEffect(() => {
         if (isLotteryEnterSuccess) {
-            console.log("Im in lottery success")
+            alert.show("Success your transaction was confirmed on the chain!")
+            console.log("LotteryData", enterLotteryData.events.LotteryTicket.returnValues)
             console.log(enterLotteryData)
-            console.log("LotteryDat", enterLotteryData.events.LotteryTicket.returnValues)
             setLotteryData(enterLotteryData)
             const event: EventObject = enterLotteryData.events.LotteryTicket.returnValues
             setEventData(event)
