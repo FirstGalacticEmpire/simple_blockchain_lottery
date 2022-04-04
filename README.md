@@ -38,5 +38,9 @@ Open [http://localhost:3000](http://localhost:3000) to view the app in the brows
 * Code refactoring
 * Caching and cookies usage! - The use of React Cache Worker. 
 
+## Pictures
+![Picture 1](https://github.com/FirstGalacticEmpire/simple_blockchain_lottery/main/pictures/picture1.png)
+![Picture 2](https://github.com/FirstGalacticEmpire/simple_blockchain_lottery/main/pictures/picture2.png)
+
 
 

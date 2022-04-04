@@ -13,7 +13,7 @@ Stwórz aplikację blockchainową - loterię, w której użytkownik wpłaca usta
 * lotteryContract folder contains HardHat smart contract development environment.
 * The final smart contract code can be found in lotteryContract/contracts/LotteryContract4.sol
 * folder frontend contains the React dapp.
-* [Deployed contract on etherscan.io](https://ropsten.etherscan.io/address/0x8d4b40C9e7ef8fafA0E4E857Ea53aF32CbfE52Fc)
+* ([Deployed contract on etherscan.io](https://ropsten.etherscan.io/address/0x8d4b40C9e7ef8fafA0E4E857Ea53aF32CbfE52Fc)
 ## How to run locally
 
 The app currently can be run locally using docker:
@@ -37,6 +37,10 @@ Open [http://localhost:3000](http://localhost:3000) to view the app in the brows
 * Extended error handling 
 * Code refactoring
 * Caching and cookies usage! - The use of React Cache Worker. 
+
+## Pictures
+![Picture 1](https://github.com/FirstGalacticEmpire/simple_blockchain_lottery/main/pictures/picture1.png)
+![Picture 2](https://github.com/FirstGalacticEmpire/simple_blockchain_lottery/main/pictures/picture2.png)
 
 
 
