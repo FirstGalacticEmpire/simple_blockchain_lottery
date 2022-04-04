@@ -18,6 +18,8 @@ Stwórz aplikację blockchainową - loterię, w której użytkownik wpłaca usta
 
 The app currently can be run locally using docker:
 
+<b>Warning:</b> React is not setup in production mode yet.
+
 ### `docker-compose build`
 ### `docker-compose up`
 <br/>
@@ -35,8 +37,12 @@ Open [http://localhost:3000](http://localhost:3000) to view the app in the brows
 * Extended testing for React and Smart Contract
   * Currently, the repository contains only one simple test for smart contract
 * Extended error handling 
-* Code refactoring
-* Caching and cookies usage! - The use of React Cache Worker. 
+* Code refactoring - especially usage of custom hooks
+* Caching and cookies usage! - Service Cache Workers
+
+## Pictures
+![Picture 1](https://github.com/FirstGalacticEmpire/simple_blockchain_lottery/blob/2-hot-fixes-and-code-cleaning/pictures/1.png)
+![Picture 2](https://github.com/FirstGalacticEmpire/simple_blockchain_lottery/blob/2-hot-fixes-and-code-cleaning/pictures/2.png)
 
 
 
